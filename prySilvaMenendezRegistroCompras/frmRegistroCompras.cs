@@ -17,9 +17,15 @@ namespace prySilvaMenendezRegistroCompras
             InitializeComponent();
         }
 
+        DateTime vFecha;
+        string vProducto;
+        int vCantidad;
+        int vPrecioUnitario;
+
         private void lblIngreso_Click(object sender, EventArgs e)
         {
-
+           
+                
         }
 
         private void txtProducto_TextChanged(object sender, EventArgs e)
@@ -39,7 +45,18 @@ namespace prySilvaMenendezRegistroCompras
 
         private void btnEnviar_Click(object sender, EventArgs e)
         {
+            vFecha = dateTimePicker1.Value;
+            vProducto = lstProducto.Text;
+            vCantidad = Convert.ToInt32(txtCantidad.Text);
+            vPrecioUnitario = Convert.ToInt32(txtPrecio.Text);
 
+            lblResultado.Text =
+                vFecha.ToString() + " - " +
+                vProducto.ToString() + " - " +
+                vCantidad.ToString() + " - " +
+                vPrecioUnitario.ToString();
+                
+                
             MessageBox.Show("Datos Enviados Correctamente");
         }
 
@@ -87,6 +104,11 @@ namespace prySilvaMenendezRegistroCompras
             {
                 btnEnviar.Enabled = false;
             }
+        }
+
+        private void lblResultado_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

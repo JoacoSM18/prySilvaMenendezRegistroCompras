@@ -40,6 +40,7 @@
             this.txtCantidad = new System.Windows.Forms.NumericUpDown();
             this.txtPrecio = new System.Windows.Forms.MaskedTextBox();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.lblResultado = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,6 +50,7 @@
             this.dateTimePicker1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dateTimePicker1.Location = new System.Drawing.Point(276, 81);
             this.dateTimePicker1.MaxDate = new System.DateTime(2025, 9, 3, 0, 0, 0, 0);
+            this.dateTimePicker1.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(197, 20);
             this.dateTimePicker1.TabIndex = 1;
@@ -170,7 +172,7 @@
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.Red;
-            this.btnCancelar.Location = new System.Drawing.Point(51, 278);
+            this.btnCancelar.Location = new System.Drawing.Point(257, 278);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(95, 36);
             this.btnCancelar.TabIndex = 14;
@@ -178,12 +180,23 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // lblResultado
+            // 
+            this.lblResultado.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResultado.Location = new System.Drawing.Point(48, 265);
+            this.lblResultado.Name = "lblResultado";
+            this.lblResultado.Size = new System.Drawing.Size(88, 62);
+            this.lblResultado.TabIndex = 15;
+            this.lblResultado.Text = "Resultados:";
+            this.lblResultado.Click += new System.EventHandler(this.lblResultado_Click);
+            // 
             // frmRegistroCompras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.ClientSize = new System.Drawing.Size(535, 336);
+            this.Controls.Add(this.lblResultado);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.txtPrecio);
             this.Controls.Add(this.txtCantidad);
@@ -220,6 +233,7 @@
         private System.Windows.Forms.NumericUpDown txtCantidad;
         private System.Windows.Forms.MaskedTextBox txtPrecio;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Label lblResultado;
     }
 }
 
