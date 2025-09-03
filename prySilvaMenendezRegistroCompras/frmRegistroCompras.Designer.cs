@@ -37,10 +37,10 @@
             this.lblPrecioU = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lstProducto = new System.Windows.Forms.ComboBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.txtCantidad = new System.Windows.Forms.NumericUpDown();
+            this.txtPrecio = new System.Windows.Forms.MaskedTextBox();
             this.btnCancelar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).BeginInit();
             this.SuspendLayout();
             // 
             // dateTimePicker1
@@ -142,22 +142,22 @@
             this.lstProducto.Size = new System.Drawing.Size(197, 21);
             this.lstProducto.TabIndex = 0;
             // 
-            // numericUpDown1
+            // txtCantidad
             // 
-            this.numericUpDown1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.numericUpDown1.Location = new System.Drawing.Point(276, 171);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(36, 20);
-            this.numericUpDown1.TabIndex = 12;
+            this.txtCantidad.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtCantidad.Location = new System.Drawing.Point(276, 171);
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(36, 20);
+            this.txtCantidad.TabIndex = 12;
             // 
-            // maskedTextBox1
+            // txtPrecio
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(276, 218);
-            this.maskedTextBox1.Mask = "99999999999";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(76, 20);
-            this.maskedTextBox1.TabIndex = 13;
-            this.maskedTextBox1.ValidatingType = typeof(int);
+            this.txtPrecio.Location = new System.Drawing.Point(276, 218);
+            this.txtPrecio.Mask = "99999999999";
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(76, 20);
+            this.txtPrecio.TabIndex = 13;
+            this.txtPrecio.ValidatingType = typeof(int);
             // 
             // btnCancelar
             // 
@@ -178,8 +178,8 @@
             this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.ClientSize = new System.Drawing.Size(535, 336);
             this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.maskedTextBox1);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.txtPrecio);
+            this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.lstProducto);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblPrecioU);
@@ -192,7 +192,7 @@
             this.Name = "frmRegistroCompras";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro de Compras Tienda 10";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -209,8 +209,8 @@
         private System.Windows.Forms.Label lblPrecioU;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox lstProducto;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.NumericUpDown txtCantidad;
+        private System.Windows.Forms.MaskedTextBox txtPrecio;
         private System.Windows.Forms.Button btnCancelar;
     }
 }
