@@ -21,5 +21,10 @@ namespace prySilvaMenendezRegistroCompras
         {
 
         }
+
+        private void txtProducto_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
