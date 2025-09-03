@@ -26,5 +26,20 @@ namespace prySilvaMenendezRegistroCompras
         {
 
         }
+
+        private void lblProducto_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnEnviar_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Datos Enviados Correctamente");
+        }
     }
 }
