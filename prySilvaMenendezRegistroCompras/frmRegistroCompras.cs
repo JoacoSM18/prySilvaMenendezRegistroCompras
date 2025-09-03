@@ -16,5 +16,10 @@ namespace prySilvaMenendezRegistroCompras
         {
             InitializeComponent();
         }
+
+        private void lblIngreso_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
