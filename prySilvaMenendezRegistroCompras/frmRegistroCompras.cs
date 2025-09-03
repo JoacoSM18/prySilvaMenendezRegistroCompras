@@ -39,7 +39,54 @@ namespace prySilvaMenendezRegistroCompras
 
         private void btnEnviar_Click(object sender, EventArgs e)
         {
+
             MessageBox.Show("Datos Enviados Correctamente");
+        }
+
+        private void frmRegistroCompras_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lstProducto_TextChanged(object sender, EventArgs e)
+        {
+            if (lstProducto.Text != "")
+            {
+                txtCantidad.Enabled = true;
+            }
+            else
+            {
+                txtCantidad.Enabled = false;
+            }
+        }
+
+        private void lstProducto_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCantidad_ValueChanged(object sender, EventArgs e)
+        {
+            if (txtCantidad.Value > 0)
+            {
+                txtPrecio.Enabled = true;
+            }
+            else
+            {
+                txtPrecio.Enabled= false;
+            }
+        }
+
+        private void txtPrecio_TextChanged(object sender, EventArgs e)
+        {
+            if (txtPrecio.Text != "")
+            {
+                btnEnviar.Enabled = true;
+            }
+            else
+            {
+                btnEnviar.Enabled = false;
+            }
         }
     }
 }

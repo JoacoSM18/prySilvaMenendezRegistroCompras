@@ -35,7 +35,7 @@
             this.lblProducto = new System.Windows.Forms.Label();
             this.lblCantidad = new System.Windows.Forms.Label();
             this.lblPrecioU = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblDia = new System.Windows.Forms.Label();
             this.lstProducto = new System.Windows.Forms.ComboBox();
             this.txtCantidad = new System.Windows.Forms.NumericUpDown();
             this.txtPrecio = new System.Windows.Forms.MaskedTextBox();
@@ -79,6 +79,7 @@
             // 
             // btnEnviar
             // 
+            this.btnEnviar.Enabled = false;
             this.btnEnviar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEnviar.Location = new System.Drawing.Point(384, 278);
             this.btnEnviar.Name = "btnEnviar";
@@ -122,16 +123,16 @@
             this.lblPrecioU.Text = "Ingrese el Precio Unitario";
             this.lblPrecioU.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label1
+            // lblDia
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(48, 83);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(207, 18);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Selecione el Dia de la Compra";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblDia.AutoSize = true;
+            this.lblDia.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDia.Location = new System.Drawing.Point(48, 83);
+            this.lblDia.Name = "lblDia";
+            this.lblDia.Size = new System.Drawing.Size(207, 18);
+            this.lblDia.TabIndex = 10;
+            this.lblDia.Text = "Selecione el Dia de la Compra";
+            this.lblDia.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lstProducto
             // 
@@ -141,23 +142,29 @@
             this.lstProducto.Name = "lstProducto";
             this.lstProducto.Size = new System.Drawing.Size(197, 21);
             this.lstProducto.TabIndex = 0;
+            this.lstProducto.SelectedIndexChanged += new System.EventHandler(this.lstProducto_SelectedIndexChanged);
+            this.lstProducto.TextChanged += new System.EventHandler(this.lstProducto_TextChanged);
             // 
             // txtCantidad
             // 
             this.txtCantidad.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txtCantidad.Enabled = false;
             this.txtCantidad.Location = new System.Drawing.Point(276, 171);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(36, 20);
             this.txtCantidad.TabIndex = 12;
+            this.txtCantidad.ValueChanged += new System.EventHandler(this.txtCantidad_ValueChanged);
             // 
             // txtPrecio
             // 
+            this.txtPrecio.Enabled = false;
             this.txtPrecio.Location = new System.Drawing.Point(276, 218);
             this.txtPrecio.Mask = "99999999999";
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(76, 20);
             this.txtPrecio.TabIndex = 13;
             this.txtPrecio.ValidatingType = typeof(int);
+            this.txtPrecio.TextChanged += new System.EventHandler(this.txtPrecio_TextChanged);
             // 
             // btnCancelar
             // 
@@ -181,7 +188,7 @@
             this.Controls.Add(this.txtPrecio);
             this.Controls.Add(this.txtCantidad);
             this.Controls.Add(this.lstProducto);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblDia);
             this.Controls.Add(this.lblPrecioU);
             this.Controls.Add(this.lblCantidad);
             this.Controls.Add(this.lblProducto);
@@ -192,6 +199,7 @@
             this.Name = "frmRegistroCompras";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro de Compras Tienda 10";
+            this.Load += new System.EventHandler(this.frmRegistroCompras_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -207,7 +215,7 @@
         private System.Windows.Forms.Label lblProducto;
         private System.Windows.Forms.Label lblCantidad;
         private System.Windows.Forms.Label lblPrecioU;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblDia;
         private System.Windows.Forms.ComboBox lstProducto;
         private System.Windows.Forms.NumericUpDown txtCantidad;
         private System.Windows.Forms.MaskedTextBox txtPrecio;
